@@ -10,7 +10,8 @@ export const routes=createBrowserRouter([
             {
                 path:"/",
                 element:<Navbar></Navbar>
-            }
+            },
+            
         ]
     }
 ])

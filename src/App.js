@@ -11,7 +11,6 @@ function App() {
       <button className="btn btn-ghost">Button</button>
       <button className="btn btn-link">Button</button>
       <h1>hi</h1>
-
     </div>
   );
 }

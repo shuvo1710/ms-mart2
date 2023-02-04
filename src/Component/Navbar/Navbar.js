@@ -22,23 +22,21 @@ const Navbar = () => {
 
     return (
         <header className=" uppercase w-full font-['Noto_sans, sans-serif'] relative inline-block h-32 bg-white z-100 align-top font-semibold">
-            <div className='flex justify-between pl-16 pr-16 mr-0 ml-0 border-b:rgba(255,255,255,0)  border-b-[1px] border-solid h-32'>
-                {/* Menu div start */}
-                <div className='flex w-full h-full items-center'>
-                    <ul className='md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in  '>
-                        {
-                            Links.map((link) => (
-                                <li className='md:ml-8 text-xs ' key={link.name}  > <a className='text-gray-800 hover:underline duration-500' href={link.link}>{link.name} </a> </li>
-                            ))
-                        }
-                    </ul>
+
+
+            <div className='bg-white text-white flex justify-between items-center py-3 px-5 h-32 border-b:rgba(255,255,255,0)  border-b-[1px] border-solid'>
+
+                <ul className='flex  text-black '>
+                    {
+                        Links.map((link) => (
+                            <li className='md:ml-8 text-xs ' key={link.name}  > <a className='text-gray-800 hover:underline duration-500' href={link.link}>{link.name} </a> </li>
+                        ))
+                    }
+                </ul>
+                <div className=' flex '>
+                    <h1 className='font-bold text-black'>Logo</h1>
                 </div>
-                
-                <div className='m-auto'>Logo</div>
-
-
-
-                <div className=' flex justify-end w-full h-full items-center '>
+                <div className='flex text-black'>
                     <div className='flex items-center  ml-4 text-xs tracking-widest'>
                         <span className='m-auto'>SEARCH</span>
                         <span className=' text-green-800 m-auto '>
@@ -76,3 +74,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

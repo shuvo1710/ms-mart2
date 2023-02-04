@@ -23,6 +23,7 @@ const Navbar = () => {
     return (
         <header className=" uppercase w-full font-['Noto_sans, sans-serif'] relative inline-block h-32 bg-white z-100 align-top font-semibold">
             <div className='flex justify-between pl-16 pr-16 mr-0 ml-0 border-b:rgba(255,255,255,0)  border-b-[1px] border-solid h-32'>
+                {/* Menu div start */}
                 <div className='flex w-full h-full items-center'>
                     <ul className='md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in  '>
                         {
@@ -32,6 +33,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
+                
                 <div className='m-auto'>Logo</div>
 
 

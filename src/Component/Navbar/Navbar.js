@@ -21,62 +21,55 @@ const Navbar = () => {
 
 
     return (
-        <div className='shadow-md w-full fixed top-0 left-0 '>
-            <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
-
-                <div className='md:hidden font-bold text-2xl absolute right-8 top-6 cursor-pointer flex'>
-                    <span className='text-3xl text-green-800 mr-1 pt-2 '>
-                        <FcMenu></FcMenu>
-                    </span>
-                    <span className='text-3xl text-green-800 mr-1 pt-2 '> <GrFormClose></GrFormClose> </span>
+        <header className=" uppercase w-full font-['Noto_sans, sans-serif'] relative inline-block h-32 bg-white z-100 align-top font-semibold">
+            <div className='flex justify-between pl-16 pr-16 mr-0 ml-0 border-b:rgba(255,255,255,0)  border-b-[1px] border-solid h-32'>
+                <div className='flex w-full h-full items-center'>
+                    <ul className='md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in  '>
+                        {
+                            Links.map((link) => (
+                                <li className='md:ml-8 text-xs ' key={link.name}  > <a className='text-gray-800 hover:underline duration-500' href={link.link}>{link.name} </a> </li>
+                            ))
+                        }
+                    </ul>
                 </div>
-                <ul className='md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in  '>
-                    {
-                        Links.map((link) => (
-                            <li className='md:ml-8 text-xl ' key={link.name}  > <a className='text-gray-800 hover:underline duration-500' href={link.link}>{link.name} </a> </li>
-                        ))
-                    }
-                </ul>
-                <div>Logo</div>
+                <div className='m-auto'>Logo</div>
 
 
 
-                <div className='font-bold flex'>
-                    <div className='flex items-center ml-4'>
-                        <h6>SEARCH</h6>
-                        <span className='text-3xl text-green-800 mr-1 pt-2 '>
-                            <BiSearch></BiSearch>
+                <div className=' flex justify-end w-full h-full items-center '>
+                    <div className='flex items-center  ml-4 text-xs tracking-widest'>
+                        <span className='m-auto'>SEARCH</span>
+                        <span className=' text-green-800 m-auto '>
+                            <BiSearch className='w-8 h-4'></BiSearch>
                         </span>
                     </div>
 
-                    <div className='flex items-center ml-4'>
-                        <h6>CART</h6>
-                        <span className='text-3xl text-green-800 mr-1 pt-2 '>
-                            <BsBag></BsBag>
+                    <div className='flex items-center ml-4 text-xs tracking-widest'>
+                        <span className='m-auto'>CART</span>
+                        <span className=' text-green-800 m-auto '>
+                            <BsBag className='w-8 h-4'></BsBag>
                         </span>
-                        <small>0</small>
+                        <span className='m-auto'>0</span>
                     </div>
 
-                    <div className='flex items-center ml-4'>
-                        <span className='text-3xl text-green-800 mr-1 pt-2 '>
-                            <BsBookmark></BsBookmark>
-                        </span>
-                        <small>0</small>
+                    <div className='flex items-center ml-4 text-xs tracking-widest'>
+                        <div className='flex tracking-widest'>
+                            <span className=' text-green-800 m-auto '>
+                                <BsBookmark className='w-8 h-4 ml-0'></BsBookmark>
+                            </span>
+                            <span className='m-auto'>0</span>
+                        </div>
 
                     </div>
-                    <div className='flex items-center ml-4'>
-                        <span className='text-3xl text-green-800 mr-1 pt-2 '>
-                            <CiUser></CiUser>
+                    <div className='flex items-center ml-4 text-xs'>
+                        <span className=' text-green-800 m-auto '>
+                            <CiUser className='w-8 h-4'  ></CiUser>
                         </span>
                     </div>
-
-
-
-
                 </div>
             </div>
 
-        </div>
+        </header>
     );
 };
 
